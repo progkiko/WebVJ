@@ -33,7 +33,7 @@ jobs:
         run: npm run build
         env:
           CI: true
-          th3edge/live: ${{ steps.project.outputs.site-url }}
+          th3edge.co.uj/live: ${{ steps.project.outputs.site-url }}
       - name: Deploy build
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: ionos-deploy-now/deploy-to-ionos-action@v1
